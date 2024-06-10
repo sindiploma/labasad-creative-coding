@@ -4,7 +4,7 @@
 
 `color()` Crea colores para ser almacenados en variables del tipo color. El modo por defecto son valores RGB. Soporta RGB, RGBA, HSB, HSL, HEX.
 
-[Color Arrangment in Generative Art | Tyler Hobbs](https://www.tylerxhobbs.com/words/color-arrangment-in-generative-art)
+**Lectura adicional:** [Color Arrangment in Generative Art | Tyler Hobbs](https://www.tylerxhobbs.com/words/color-arrangment-in-generative-art)
 
 ### Primitivos 2D
 
@@ -62,7 +62,7 @@
 
 ### Expresiones y operadores
 
-Comparison and logical `++`, `+=`, `||`, `&&`, `!`, …
+Comparison and logical operators `++`, `+=`, `||`, `&&`, `!`, …
 
 [JavaScript Comparison and Logical Operators](https://www.w3schools.com/js/js_comparisons.asp)
 
@@ -72,23 +72,23 @@ Comparison and logical `++`, `+=`, `||`, `&&`, `!`, …
 
 `random()`  `noise()`
 
-[Noise in Creative Coding](https://varun.ca/noise/)
+**Lectura adicional:** [Noise in Creative Coding](https://varun.ca/noise/)
 
 ### Condicionales y loops
 
-- `if` / `else`
-- `for` / `while`
+`if` / `else`
+`for` / `while`
 
 [I.1: Random Walker - The Nature of Code](https://www.youtube.com/watch?v=rqecAdEGW6I)
 
 ### Eventos
 
-- `mouseX` / `mouseY` almacenan la posición actual del cursor dentro del canvas
-- `pmouseX` / `pmouseY` almacenan la posición
-- `winMouseX` / `winMouseY` / `pwinMouseX` / `pwinMouseY` almacenan la posición del cursor respecto a la ventana del navegador
-- `mouseIsPressed` / `mousePressed()` La función mousePressed es llamada cada vez que un botón del ratón está siendo presionado, mientras que la variable booleana mouseIsPressed es verdadera (true) si el ratón está siendo presionado, y falsa (false) en caso contrario.
-- `mouseMoved()` es llamada cada vez que el ratón se mueve y un botón del ratón no está siendo presionado
-- `keyPressed()` es llamada una vez cada vez que una tecla es presionada
-- `key` / `keyCode` la variable de sistema *key* siempre contiene el valor más reciente de la tecla del teclado presionada, mientras que la variable *keyCode* es usada para detectar teclas especiales
-- `touchStarted()` / `touchMoved()`
-- `deviceOrientation`
+`mouseX` / `mouseY` almacenan la posición actual del cursor dentro del canvas
+`pmouseX` / `pmouseY` almacenan la posición
+`winMouseX` / `winMouseY` / `pwinMouseX` / `pwinMouseY` almacenan la posición del cursor respecto a la ventana del navegador
+`mouseIsPressed` / `mousePressed()` La función mousePressed es llamada cada vez que un botón del ratón está siendo presionado, mientras que la variable booleana mouseIsPressed es verdadera (true) si el ratón está siendo presionado, y falsa (false) en caso contrario.
+`mouseMoved()` es llamada cada vez que el ratón se mueve y un botón del ratón no está siendo presionado
+`keyPressed()` es llamada una vez cada vez que una tecla es presionada
+`key` / `keyCode` la variable de sistema *key* siempre contiene el valor más reciente de la tecla del teclado presionada, mientras que la variable *keyCode* es usada para detectar teclas especiales
+`touchStarted()` / `touchMoved()`
+`deviceOrientation`
