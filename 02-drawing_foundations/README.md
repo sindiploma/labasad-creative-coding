@@ -60,11 +60,6 @@
 
 `textToPoints()` 
 
-<aside>
-💪 **Drawing Foundations:** Creación de un diseño generativo mediante el uso de Primitivos 2D y atributos de dibujo
-
-</aside>
-
 ### Expresiones y operadores (20’)
 
 Comparison and logical `++`, `+=`, `||`, `&&`, `!`, …
@@ -86,11 +81,6 @@ Comparison and logical `++`, `+=`, `||`, `&&`, `!`, …
 
 [I.1: Random Walker - The Nature of Code](https://www.youtube.com/watch?v=rqecAdEGW6I)
 
-<aside>
-💪 **Bouncing Ball:** Simulación básica de un bola saltarina
-
-</aside>
-
 ### Eventos
 
 - `mouseX` / `mouseY` almacenan la posición actual del cursor dentro del canvas
@@ -102,8 +92,3 @@ Comparison and logical `++`, `+=`, `||`, `&&`, `!`, …
 - `key` / `keyCode` la variable de sistema *key* siempre contiene el valor más reciente de la tecla del teclado presionada, mientras que la variable *keyCode* es usada para detectar teclas especiales
 - `touchStarted()` / `touchMoved()`
 - `deviceOrientation`
-
-<aside>
-💪 **Mouse Brush:** Diseño de un pincel generativo con el uso del mouse
-
-</aside>
