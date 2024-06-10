@@ -60,7 +60,7 @@
 
 `textToPoints()` 
 
-### Expresiones y operadores (20’)
+### Expresiones y operadores
 
 Comparison and logical `++`, `+=`, `||`, `&&`, `!`, …
 
@@ -74,7 +74,7 @@ Comparison and logical `++`, `+=`, `||`, `&&`, `!`, …
 
 [Noise in Creative Coding](https://varun.ca/noise/)
 
-### Condicionales y loops (20’)
+### Condicionales y loops
 
 - `if` / `else`
 - `for` / `while`
