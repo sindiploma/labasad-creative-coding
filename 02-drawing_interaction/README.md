@@ -6,6 +6,8 @@
 
 **Lectura adicional:** [Color Arrangment in Generative Art | Tyler Hobbs](https://www.tylerxhobbs.com/words/color-arrangment-in-generative-art)
 
+---
+
 ### Primitivos 2D
 
 `point()` dibuja un punto
@@ -26,6 +28,8 @@
 
 `beginShape()` / `endShape()` / `vertex()` *beginShape* empieza la grabación de vértices para una figura, mientras que *endShape* termina la grabación. Después de llamar a la función *beginShape*, debe ser seguida por una serie de comandos *vertex*.
 
+---
+
 ### Atributos
 
 `background()` define el color usado como fondo del lienzo
@@ -44,6 +48,8 @@
 
 `smooth()` / `noSmooth()`
 
+---
+
 ### Tipografia
 
 `loadFont()` Carga un archivo de fuente de letra (*.otf, .ttf*) desde un archivo o URL, y retorna un objeto *PFont*. Este método es asíncrono, lo que significa que puede que no finalice antes de que la siguiente línea en tu sketch sea ejecutada.
@@ -60,11 +66,15 @@
 
 `textToPoints()` 
 
+---
+
 ### Expresiones y operadores
 
 Comparison and logical operators `++`, `+=`, `||`, `&&`, `!`, …
 
 [JavaScript Comparison and Logical Operators](https://www.w3schools.com/js/js_comparisons.asp)
+
+---
 
 ### Cálculo
 
@@ -74,6 +84,8 @@ Comparison and logical operators `++`, `+=`, `||`, `&&`, `!`, …
 
 **Lectura adicional:** [Noise in Creative Coding](https://varun.ca/noise/)
 
+---
+
 ### Condicionales y loops
 
 `if` / `else`
@@ -81,6 +93,8 @@ Comparison and logical operators `++`, `+=`, `||`, `&&`, `!`, …
 `for` / `while`
 
 [I.1: Random Walker - The Nature of Code](https://www.youtube.com/watch?v=rqecAdEGW6I)
+
+---
 
 ### Eventos
 

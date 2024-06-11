@@ -8,6 +8,8 @@ La función `draw()` es ejecutada después de `setup()`, y ejecuta contínuament
 
 [Global and instance mode](https://github.com/processing/p5.js/wiki/Global-and-instance-mode)
 
+---
+
 ### Frames (tiempo)
 
 fps 30-60
@@ -19,6 +21,8 @@ fps 30-60
 `millis()` retorna el número de milisegundos (milésimas de segundo) desde que el programa empezó a correr.
 
 La variable del sistema `deltaTime` contiene la diferencia de tiempo entre cuando empezo el cuadro (frame) anterior y cuando empezó el cuadro actual en milisegundos.
+
+---
 
 ### Disposición (Posición y coordenadas)
 
