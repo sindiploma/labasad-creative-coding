@@ -9,4 +9,4 @@ Esta asignatura explora los usos creativos del desarrollo de software al tiempo 
 - Adquirir y reforzar habilidades básicas de programación para crear aplicaciones de software creativas.
 - Conocer el panorama de artistas, la historia, y herramientas en el campo del Creative Coding.
 - Aprender a auto-educarse y a encontrar respuestas a problemas muy específicos mientras se desarrollan habilidades de programación.
-- Aprender a amar la práctica de la programación creativa a través de una amplia gama de herramientas, técnicas y conceptos.
+- Aprender sobre la práctica de la programación creativa a través de una amplia gama de herramientas, técnicas y conceptos.
