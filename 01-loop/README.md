@@ -12,8 +12,6 @@ La función `draw()` es ejecutada después de `setup()`, y ejecuta contínuament
 
 ### Frames (tiempo)
 
-fps 30-60
-
 `frameRate()` especifica el número de cuadros mostrados por segundo.
 
 `frameCount` contiene el número de cuadros (frames) que se han mostrado desde que el programa empezó a ejecutarse.
@@ -26,13 +24,9 @@ La variable del sistema `deltaTime` contiene la diferencia de tiempo entre cua
 
 ### Disposición (Posición y coordenadas)
 
-Coordenadas cartesianas
-
 `width()` almacena el ancho del lienzo dibujado
 
 `height()` almacena la altura del lienzo dibujado
-
-Diferencia entre el tamaño del canvas en px y el tamaño css del contenedor. El canvas es un bitmap, se comporta como una imagen.
 
 `resizeCanvas()` Redimensiona el lienzo al ancho y la altura dados
 
