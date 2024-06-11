@@ -4,6 +4,8 @@ Esta asignatura explora los usos creativos del desarrollo de software al tiempo 
 
 [Máster Online en Programación para Creativos • LABASAD](https://www.labasad.com/master/master-online-en-programacion-para-creativos/)
 
+---
+
 ## Objetivos
 
 - Adquirir y reforzar habilidades básicas de programación para crear aplicaciones de software creativas.
