@@ -78,11 +78,9 @@ Comparison and logical operators `++`, `+=`, `||`, `&&`, `!`, …
 
 ### Cálculo
 
-`ceil()` / `floor()` 
+`ceil()` / `floor()` calculan el entero más cercano que: es mayor o igual que el valor del parámetro (*ceil*), o menor o igual (*floor*).
 
-`random()`  `noise()`
-
-**Lectura adicional:** [Noise in Creative Coding](https://varun.ca/noise/)
+`random()` retorna un número aleaotorio de tipo float (punto flotante).
 
 ---
 
