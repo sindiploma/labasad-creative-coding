@@ -42,7 +42,6 @@ function draw() {
     if (posx > width || posx < 0) {
       speedx *= -1;
       c = color(random(255), 150, 120);
-      console.log(c);
       count++
     }
 
@@ -50,7 +49,6 @@ function draw() {
     if (posy > height || posy < 0) {
       speedy *= -1;
       c = color(random(255), 150, 120);
-      console.log(c);
       count++;
     }
 
@@ -77,9 +75,9 @@ function draw() {
   text(count, width - 10, height - 10);
 
 
+  // Actualizar cronometro
   if (frameCount % 60 === 0) {
     time++;
   }
-
   text(time, width - 10, 20);
 }
