@@ -1,5 +1,6 @@
 let c;
 let count;
+let time;
 let posx;
 let posy;
 let speedx = 2;
@@ -20,6 +21,8 @@ function setup() {
   
   // Setear variables
   count = 0;
+  time = 0;
+
   c = random(255);
   posx = floor(random(0, width));
   posy = floor(random(0, height));
@@ -39,6 +42,7 @@ function draw() {
     if (posx > width || posx < 0) {
       speedx *= -1;
       c = color(random(255), 150, 120);
+      console.log(c);
       count++
     }
 
@@ -46,6 +50,7 @@ function draw() {
     if (posy > height || posy < 0) {
       speedy *= -1;
       c = color(random(255), 150, 120);
+      console.log(c);
       count++;
     }
 
@@ -53,7 +58,12 @@ function draw() {
   
   } else {
     fill(255);
+    noLoop();
   }
+
+  // Dibujar pelota
+  noStroke();
+  ellipse(posx, posy, 100, 100);
 
   // Actualizar coordenadas de posición
   let pos = [posx, posy];
@@ -66,9 +76,10 @@ function draw() {
   textAlign(RIGHT);
   text(count, width - 10, height - 10);
 
-  // Dibujar pelota
-  noStroke();
-  ellipse(posx, posy, 100, 100);
 
-  fill(0);
+  if (frameCount % 60 === 0) {
+    time++;
+  }
+
+  text(time, width - 10, 20);
 }
