@@ -29,6 +29,7 @@ function setup() {
 }
 
 function draw() {
+
   // BACKGROUND
   background(0);
 
