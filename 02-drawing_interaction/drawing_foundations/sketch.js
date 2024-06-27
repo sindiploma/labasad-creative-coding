@@ -2,7 +2,7 @@ let font;
 
 // PRELOAD
 function preload () {
-  font = loadFont('assets/CourierNew.ttf')
+  font = loadFont('../../assets/CourierNew.ttf')
 }
 
 function setup() {
