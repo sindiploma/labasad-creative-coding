@@ -1,4 +1,4 @@
-let posx = -20;
+let posx = -10;
 
 // SETUP
 // Ejecutada una vez, cuando el programa empieza. 
@@ -20,6 +20,9 @@ function setup() {
 
 function draw() {
 
+  // Fondo del lienzo
+  background(220);
+  
   // Width y Height
   // console.log(width, height);
 
@@ -32,11 +35,11 @@ function draw() {
     ellipse(width/2, height/2, 80, 80);
 
     // 1.b. Elemento animado
-    rect(posx, height - 10, 10, 10);
+    rect(posx, height - 20, 10, 10);
     posx += 4;
 
     if (posx > width) {
-      posx = 0;
+      posx = -10;
     }
 
   // Elemento 2
