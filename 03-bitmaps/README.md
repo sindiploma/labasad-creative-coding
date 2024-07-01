@@ -29,13 +29,13 @@
 ## Bitmap Loop (30’)
 
 ```jsx
-for (let y = 0; y < video.height; y++) {
-    for (let x = 0; x < video.width; x++) {
-      let index = (video.width - x + 1 + (y * video.width))*4;
+for (let y = 0; y < image.height; y++) {
+    for (let x = 0; x < image.width; x++) {
+      let index = (image.width - x + 1 + (y * image.width))*4;
 
-      let r = video.pixels[index+0]; // R
-      let g = video.pixels[index+1]; // G
-      let b = video.pixels[index+2]; // B
+      let r = image.pixels[index+0]; // R
+      let g = image.pixels[index+1]; // G
+      let b = image.pixels[index+2]; // B
 
       let bright = (r + g + b) / 3;
     }
