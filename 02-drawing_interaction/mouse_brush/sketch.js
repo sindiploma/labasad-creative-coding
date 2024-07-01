@@ -5,19 +5,24 @@ function setup() {
 
 function draw() {
 
+  background(0);
+
   // Cambiar color mode a HSB
   colorMode(HSB);
 
   // Mientras presionamos el botón del cursor
   if(mouseIsPressed) {
     // Seleccionar un radio y un color aleatorio
-    let r = random(5, 20);
-    let c = random(255);
+    let radius = random(5, 20);
     
-    fill(c,100,100);
+    let hue = random(255);
+    let saturation = random(255);
+    
+    fill(hue,saturation,100);
     
     // Dibujar circulos aleatorios según la posición del cursor
-    ellipse(mouseX + random(-10, 10), mouseY + random(-10, 10), r*2, r*2);
+    // ellipse (x,y, width, height)
+    ellipse(mouseX + random(-10, 10), mouseY + random(-10, 10), radius*2, radius*2);
   }
 
   // Reiniciar el canvas

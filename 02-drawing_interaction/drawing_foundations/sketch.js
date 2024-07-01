@@ -1,8 +1,8 @@
-let font;
+let myFont;
 
 // PRELOAD
 function preload () {
-  font = loadFont('../../assets/CourierNew.ttf')
+  myFont = loadFont('../../assets/CourierNew.ttf')
 }
 
 function setup() {
@@ -14,21 +14,23 @@ function draw() {
   background(220);
 
   // COLOR MODE
-  // colorMode(HSB); // RGB, HSL, HSB
+  colorMode(RGB); // RGB, HSL, HSB RGBA HSLA HSBA
   
   // POINT
   // point (x, y);
   
   stroke(255, 0, 0);
-  strokeWeight(28);  
+  strokeWeight(48);  
   point(50, 50);
 
 
   // ELLIPSE
   // ellipse (x, y, width, height)
   
-  fill(0,255,255);
-  noStroke();
+  fill(0,255,10);
+  // noStroke();
+  strokeWeight(1);
+  stroke(200,255,210);
   ellipse(110, 110, 120, 120);
   // ellipseMode(CORNER);
   
@@ -45,7 +47,7 @@ function draw() {
   // RECTANGLE
   // rect (x, y, width, height, radius1, radius2, radius3, radius4)
   
-  fill(255,255,0, 200);
+  fill(255,255,0, 100);
   rect(width/2, height/2, 180, 180, 20);
   // rectMode(CENTER);
 
@@ -69,7 +71,7 @@ function draw() {
   strokeWeight(25);
   stroke(0, 40);
   strokeCap(PROJECT); // ROUND / SQUARE / PROJECT
-  arc(320, 80, 80, 80, 0, TWO_PI - PI);
+  arc(320, 80, 80, 80, 0, PI);
   
 
   // QUAD
@@ -82,6 +84,7 @@ function draw() {
   
   // TRIANGLE
   // triangle(x1, y1, x2, y2, x3, y3);
+  
   
   noFill();
   stroke(0);
@@ -107,9 +110,9 @@ function draw() {
 
   // TEXT
   // text (string, x, y);
-  textFont(font);
+  textFont(myFont);
   noStroke();
   fill(0);
   textSize(16);
-  text('p5.js', 310, 170);
+  text('lorem ipsum', 310, 170);
 }

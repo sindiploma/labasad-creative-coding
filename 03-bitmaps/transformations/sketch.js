@@ -2,8 +2,8 @@ let pattern; let cat;
 let distance = 0;
 
 function preload() {
-  pattern = loadImage('assets/pattern.png');
-  cat = loadImage('assets/cat.jpeg');
+  pattern = loadImage('../../assets/pattern.png');
+  cat = loadImage('../../assets/cat.jpeg');
 }
 
 function setup() {

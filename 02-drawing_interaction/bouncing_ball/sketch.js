@@ -5,7 +5,7 @@ let posx;
 let posy;
 let speedx = 2;
 let speedy = 3;
-let limit = 20;
+let limit = 100;
 
 
 function setup() {
@@ -13,8 +13,8 @@ function setup() {
   
   // Para mover el canvas a un contenedor específico,
   // Tendremos que utilizar el "instance mode"
-  // let canvas = createCanvas(400, 400);
-  // canvas.parent('sketch-container')
+  // let myCanvas = createCanvas(400, 400);
+  // myCanvas.parent('sketch-container')
 
   // Setear Color Mode 
   colorMode(HSB);
@@ -32,6 +32,7 @@ function draw() {
 
   // BACKGROUND
   background(0);
+  
 
   // Comprobar colisiones de la pelota
   if (count < limit) {
@@ -68,6 +69,7 @@ function draw() {
   let pos = [posx, posy];
   let sep = ', ';
   textAlign(CENTER);
+  fill(0);
   text(join(pos, sep), posx, posy);
 
   // Actualizar contador de colisiones

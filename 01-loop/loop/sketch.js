@@ -6,10 +6,10 @@ let posx = -10;
 function setup() {
   
   // Canvas con dimensiones fijas
-  createCanvas(400, 400);
+  // createCanvas(400, 400);
   
   // Canvas a ventana completa
-  // createCanvas(windowWidth, windowHeight); 
+  createCanvas(windowWidth, windowHeight); 
 
   // Fondo del lienzo
   background(220);
@@ -21,7 +21,7 @@ function setup() {
 function draw() {
 
   // Fondo del lienzo
-  background(220);
+  // background(220);
   
   // Width y Height
   // console.log(width, height);
@@ -44,7 +44,8 @@ function draw() {
 
   // Elemento 2
   // Posicionado en relación a la posición del cursor
-  line(mouseX, mouseY, width/2 + 10, height/2 + 10);
+  line(mouseX, mouseY, width, height);
+  // line(x1, y1, x2, y2)
 
   // Elemento 3
   // Posicionado por medio de una Transformación
@@ -68,7 +69,7 @@ function draw() {
 
 // Recalcular tamaño del canvas
 function windowResized() {
-  // resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 // Cambiar a pantalla completa
