@@ -14,22 +14,22 @@ La función `draw()` es ejecutada después de `setup()`, y ejecuta contínuament
 
 [`frameRate()`](https://p5js.org/reference/p5/frameRate/) especifica el número de cuadros mostrados por segundo.
 
-`frameCount` contiene el número de cuadros (frames) que se han mostrado desde que el programa empezó a ejecutarse.
+[`frameCount`](https://p5js.org/reference/p5/frameCount/) contiene el número de cuadros (frames) que se han mostrado desde que el programa empezó a ejecutarse.
 
-`millis()` retorna el número de milisegundos (milésimas de segundo) desde que el programa empezó a correr.
+[`millis()`](https://p5js.org/reference/p5/millis/) retorna el número de milisegundos (milésimas de segundo) desde que el programa empezó a correr.
 
-La variable del sistema `deltaTime` contiene la diferencia de tiempo entre cuando empezo el cuadro (frame) anterior y cuando empezó el cuadro actual en milisegundos.
+La variable del sistema [`deltaTime`](https://p5js.org/reference/p5/deltaTime/) contiene la diferencia de tiempo entre cuando empezo el cuadro (frame) anterior y cuando empezó el cuadro actual en milisegundos.
 
 ---
 
 ### Disposición (Posición y coordenadas)
 
-`width()` almacena el ancho del lienzo dibujado
+[`width`](https://p5js.org/reference/p5/width/) almacena el ancho del lienzo dibujado
 
-`height()` almacena la altura del lienzo dibujado
+[`height`](https://p5js.org/reference/p5/height/) almacena la altura del lienzo dibujado
 
-`resizeCanvas()` Redimensiona el lienzo al ancho y la altura dados
+[`resizeCanvas()`](https://p5js.org/reference/p5/resizeCanvas/) Redimensiona el lienzo al ancho y la altura dados
 
-`fullscreen()` define que el boceto esté a pantalla completa o no basado en el valor del argumento.
+[`fullscreen()`](https://p5js.org/reference/p5/fullscreen/) define que el boceto esté a pantalla completa o no basado en el valor del argumento.
 
-`saveFrames()` Captura una secuencia de cuadros que pueden ser usados para crear una película.
+[`saveFrames()`](https://p5js.org/reference/p5/saveFrames/) Captura una secuencia de cuadros que pueden ser usados para crear una película.
