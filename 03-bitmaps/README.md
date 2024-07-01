@@ -6,7 +6,7 @@
 
 [`scale()`](https://p5js.org/reference/p5/scale) aumenta o decrementa el tamaño de una figura por medio de expandir o contraer sus vértices.
 
-[`shearX()`](https://p5js.org/reference/p5/shearX), `shearY()` corta la figura en torno a un eje según el ángulo especificado
+[`shearX()`](https://p5js.org/reference/p5/shearX), [`shearY()`](https://p5js.org/reference/p5/shearY) corta la figura en torno a un eje según el ángulo especificado
 
 [`translate()`](https://p5js.org/reference/p5/translate) especifica una cantidad a desplazar los objetos dentro de la ventana mostrada
 
