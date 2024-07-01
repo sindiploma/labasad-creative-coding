@@ -13,7 +13,7 @@ function setup() {
   createCanvas(600, 600)
   background(220)
 
-  song = loadSound('assets/song.mp3', loaded) // http://jamen.do/t/1882761
+  song = loadSound('../../assets/song.mp3', loaded) // http://jamen.do/t/1882761
 
   amp = new p5.Amplitude();
 
