@@ -12,7 +12,7 @@ La función `draw()` es ejecutada después de `setup()`, y ejecuta contínuament
 
 ### Frames (tiempo)
 
-`frameRate()` especifica el número de cuadros mostrados por segundo.
+[`frameRate()`](https://p5js.org/reference/p5/frameRate/) especifica el número de cuadros mostrados por segundo.
 
 `frameCount` contiene el número de cuadros (frames) que se han mostrado desde que el programa empezó a ejecutarse.
 
