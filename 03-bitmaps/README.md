@@ -1,30 +1,30 @@
 ## Transformaciones (30’)
 
-`push()` / `pop()` Una graba la configuración actual de estilo de dibujo (push), mientras la otra la restaura (pop)
+[`push()`](https://p5js.org/reference/p5/push) / [`pop()`](https://p5js.org/reference/p5/pop) Una graba la configuración actual de estilo de dibujo (push), mientras la otra la restaura (pop)
 
-`rotate()` / `rotateZ()` rota una figura según el ángulo especificado.
+[`rotate()`](https://p5js.org/reference/p5/rotate) / [`rotateZ()`](https://p5js.org/reference/p5/rotateZ) rota una figura según el ángulo especificado.
 
-`scale()` aumenta o decrementa el tamaño de una figura por medio de expandir o contraer sus vértices.
+[`scale()`](https://p5js.org/reference/p5/scale) aumenta o decrementa el tamaño de una figura por medio de expandir o contraer sus vértices.
 
-`shearX()`, `shearY()` corta la figura en torno a un eje según el ángulo especificado
+[`shearX()`](https://p5js.org/reference/p5/shearX), `shearY()` corta la figura en torno a un eje según el ángulo especificado
 
-`translate()` especifica una cantidad a desplazar los objetos dentro de la ventana mostrada
+[`translate()`](https://p5js.org/reference/p5/translate) especifica una cantidad a desplazar los objetos dentro de la ventana mostrada
 
-`applyMatrix()` multiplica la matriz actual por la especificada según los parámetros
+[`applyMatrix()`](https://p5js.org/reference/p5/applyMatrix) multiplica la matriz actual por la especificada según los parámetros
 
 ## Imagen (30’)
 
-`loadImage()` carga una imagen desde una ruta de archivo y crea un objeto p5.Image
+[`loadImage()`](https://p5js.org/reference/p5/loadImage) carga una imagen desde una ruta de archivo y crea un objeto p5.Image
 
-`image()` dibuja una imagen en el lienzo 
+[`image()`](https://p5js.org/reference/p5/image) dibuja una imagen en el lienzo
 
-`imageMode()` modifica la ubicación de donde la imagen es dibujada
+[`imageMode()`](https://p5js.org/reference/p5/imageMode) modifica la ubicación de donde la imagen es dibujada
 
-`tint()` / `noTint()` definen el valor de relleno para mostrar imágenes
+[`tint()`](https://p5js.org/reference/p5/tint) / [`noTint()`](https://p5js.org/reference/p5/noTint) definen el valor de relleno para mostrar imágenes
 
-`filter()` aplica un filtro
+[`filter()`](https://p5js.org/reference/p5/filter) aplica un filtro
 
-`blend()` copia una región de pixeles de una imagen a otra, usando un modo específico de mezcla
+[`blend()`](https://p5js.org/reference/p5/blend) copia una región de pixeles de una imagen a otra, usando un modo específico de mezcla
 
 ## Bitmap Loop (30’)
 
@@ -40,28 +40,29 @@ for (let y = 0; y < image.height; y++) {
       let bright = (r + g + b) / 3;
     }
   }
+
 ```
 
-`loadPixels()` / `updatePixels()`  cargan los datos de los pixeles en pantalla en el array *pixels[]*, o los actualiza.
+[`loadPixels()`](https://p5js.org/reference/p5/loadPixels) / [`updatePixels()`](https://p5js.org/reference/p5/updatePixels)  cargan los datos de los pixeles en pantalla en el array *pixels[]*, o los actualiza.
 
-`pixels` contiene todos los valores por cada uno de los pixels de la ventana.
+[`pixels`](https://p5js.org/reference/p5/pixels) contiene todos los valores por cada uno de los pixels de la ventana.
 
-`get()` / `set()` obtienen y establecen el color de un pixel, o de una región entera de píxeles de una imagen
+[`get()`](https://p5js.org/reference/p5/get) / [`set()`](https://p5js.org/reference/p5/set) obtienen y establecen el color de un pixel, o de una región entera de píxeles de una imagen
 
-`copy()` copia una región de píxeles de una imagen a otra.
+[`copy()`](https://p5js.org/reference/p5/copy) copia una región de píxeles de una imagen a otra.
 
 ## Video (30’)
 
-`size()` controla el ancho y alto del video.
+[`size()`](https://p5js.org/reference/p5.Element/size) controla el ancho y alto del video.
 
-`play()` inicia la reproducción.
+[`play()`](https://p5js.org/reference/p5.MediaElement/play) inicia la reproducción.
 
-`loop()` activa la reproducción infinita del video.
+[`loop()`](https://p5js.org/reference/p5.MediaElement/loop) activa la reproducción infinita del video.
 
-`pause()` pausa la reproducción.
+[`pause()`](https://p5js.org/reference/p5.MediaElement/pause) pausa la reproducción.
 
-`time()` almacena el tiempo de video transcurrido.
+[`time()`](https://p5js.org/reference/p5.MediaElement/time) almacena el tiempo de video transcurrido.
 
-`duration()` indica la duración del video.
+[`duration()`](https://p5js.org/reference/p5.MediaElement/duration) indica la duración del video.
 
 [Working with video (Creative Coding)](https://creative-coding.decontextualize.com/video/)
