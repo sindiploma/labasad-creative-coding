@@ -1,6 +1,6 @@
 ## Transformaciones (30’)
 
-(`push()`)[https://p5js.org/reference/p5/push/] / `pop()` Una graba la configuración actual de estilo de dibujo (push), mientras la otra la restaura (pop)
+`push()` / `pop()` Una graba la configuración actual de estilo de dibujo (push), mientras la otra la restaura (pop)
 
 `rotate()` / `rotateZ()` rota una figura según el ángulo especificado.
 
