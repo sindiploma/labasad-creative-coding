@@ -1,4 +1,4 @@
-## Transformaciones (30’)
+## Transformaciones
 
 [`push()`](https://p5js.org/reference/p5/push) / [`pop()`](https://p5js.org/reference/p5/pop) Una graba la configuración actual de estilo de dibujo (push), mientras la otra la restaura (pop)
 
@@ -12,7 +12,7 @@
 
 [`applyMatrix()`](https://p5js.org/reference/p5/applyMatrix) multiplica la matriz actual por la especificada según los parámetros
 
-## Imagen (30’)
+## Imagen
 
 [`loadImage()`](https://p5js.org/reference/p5/loadImage) carga una imagen desde una ruta de archivo y crea un objeto p5.Image
 
@@ -26,7 +26,7 @@
 
 [`blend()`](https://p5js.org/reference/p5/blend) copia una región de pixeles de una imagen a otra, usando un modo específico de mezcla
 
-## Bitmap Loop (30’)
+## Bitmap Loop
 
 ```jsx
 for (let y = 0; y < image.height; y++) {
@@ -51,7 +51,7 @@ for (let y = 0; y < image.height; y++) {
 
 [`copy()`](https://p5js.org/reference/p5/copy) copia una región de píxeles de una imagen a otra.
 
-## Video (30’)
+## Video
 
 [`size()`](https://p5js.org/reference/p5.Element/size) controla el ancho y alto del video.
 
