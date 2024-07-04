@@ -1,3 +1,9 @@
+# libraries
+
+[Librerías p5](https://p5js.org/es/libraries/)
+
+[p5.js-sound](https://github.com/processing/p5.js-sound)
+
 # p5.sound
 
 [`loadSound`](https://p5js.org/reference/p5/loadSound/) devuelve un nuevo `p5.SoundFile`.
