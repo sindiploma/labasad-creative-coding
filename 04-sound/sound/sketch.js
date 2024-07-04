@@ -91,7 +91,6 @@ function togglePlay () {
     /*
     Loop
     https://p5js.org/reference/p5.Part/loop/
-    play([startTime], [rate], [amp], [cueStart], [duration])
     */
     // song.loop()
 
