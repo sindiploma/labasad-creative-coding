@@ -6,10 +6,6 @@
 
 [`setInput()`](https://p5js.org/reference/p5.Amplitude/setInput/) se conecta a la instancia p5sound (salida principal) de forma predeterminada. Opcionalmente, puede pasar una fuente específica (es decir, un archivo de sonido).
 
-```jsx
-setInput([snd], [smoothing])
-```
-
 [`play()`](https://p5js.org/reference/p5.SoundFile/play/) reproduce el `p5.SoundFile`
 
 [`isPlaying()`](https://p5js.org/reference/p5.SoundFile/isPlaying/) devuelve `true` si se está reproduciendo un `p5.SoundFile`, `false` si no es así (es decir, está en pausa o detenido).
@@ -25,10 +21,6 @@ setInput([snd], [smoothing])
 [`getLevel()`](https://p5js.org/reference/p5.Amplitude/getLevel/) devuelve una única lectura de amplitud.
 
 [`amp()`](https://p5js.org/reference/p5.AudioIn/amp/) establece la amplitud (volumen) de una entrada de micrófono entre 0 y 1.
-
-```jsx
-amp(vol, [time])
-```
 
 [`setVolume()`](https://p5js.org/reference/p5.SoundFile/setVolume/) Multiplica el volumen de salida (amplitud) de un archivo de sonido entre 0 (silencio) y 1 (volumen completo).
 

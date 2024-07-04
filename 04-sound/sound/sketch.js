@@ -1,11 +1,14 @@
 let song
 let button
 let sliderVolume
-let sliderRate
 let time
 let amp
 let fft
 let currentHeight = 20;
+
+let config = {
+  rate: 1
+}
 
 
 // Precargamos los archivos de audio
@@ -46,7 +49,9 @@ function setup() {
   button.mousePressed(togglePlay)
   
   sliderVolume = createSlider(0, 1, 0.5, 0.01) 
-  sliderRate = createSlider(0, 2, 1, 0.01)
+
+  gui = new dat.GUI();
+  gui.add(config, 'rate', 0, 4);
 }
 
 
@@ -74,7 +79,7 @@ function togglePlay () {
   https://p5js.org/reference/p5.SoundFile/isPlaying/
   */
   if (!song.isPlaying()) {
-    button.html('Stop')
+    button.html('Pause')
 
     /*
     Play
@@ -92,7 +97,12 @@ function togglePlay () {
 
   } else {
     button.html('Play')
-    song.stop()
+
+    /*
+    Pause
+    https://p5js.org/reference/p5.Part/pause/
+    */
+    song.pause()
   }
 }
 
@@ -112,7 +122,7 @@ function draw() {
   Rate
   https://p5js.org/reference/p5.SoundFile/rate/
   */
-  song.rate(sliderRate.value())
+  song.rate(config.rate)
 
   /*
   Pan
@@ -125,7 +135,7 @@ function draw() {
   // Sobreimprimimos un rectángulo para repintar los frames
 
   noStroke();
-  fill(20, sliderRate.value()*100);
+  fill(20, config.rate*100);
   rect(0, 0, width, height - currentHeight);
 
   
