@@ -4,7 +4,8 @@ let sliderVolume
 let sliderRate
 let time
 let amp
-
+let fft
+let currentHeight = 20;
 
 
 // Precargamos los archivos de audio
@@ -22,15 +23,22 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600)
-  background(220)
+  background(0)
 
-  // Creamos una nueva instancia del objeto p5.Amplitude
+  // Creamos una nueva instancia del objeto p5.Amplitude y p5.FFT
 
   /*
   Amplitude
   https://p5js.org/reference/p5.sound/p5.Amplitude/
   */
   amp = new p5.Amplitude();
+
+  /*
+  FFT
+  https://p5js.org/reference/p5.sound/p5.FFT/
+  p5.FFT([smoothing], [bins])
+  */
+  fft = new p5.FFT(0.8, 128);
 
   // Creamos controladores html
 
@@ -90,34 +98,7 @@ function togglePlay () {
 
 
 
-function draw() {
-
-  // Capturamos el tiempo transcurrido del sonido y pintamos las barras de progreso
-  
-  let current = song.currentTime()
-  let currentWidth = map(current, 0, time, 0, width)
-  let currentHeight = 20;
-  fill(200);
-  noStroke();
-  rect(0, height - currentHeight, width, currentHeight);
-  
-  fill(0, 200);
-  rect(0, height - currentHeight, currentWidth, currentHeight)
-
-
-  
-  // Dibujamos un círculo representando la amplitud del sonido
-
-  /*
-  GetLevel
-  https://p5js.org/reference/p5.Amplitude/getLevel/
-  */
-  let r = amp.getLevel()*1000;
-  
-  ellipse(width/2, height/2, r*2, r*2)
-
-  
-
+function draw() {  
   // Configuramos los controles
 
   /*
@@ -141,9 +122,59 @@ function draw() {
   song.pan(mousePan)
 
 
-  
   // Sobreimprimimos un rectángulo para repintar los frames
 
-  fill(200, sliderRate.value()*100);
-  rect(0, 0, width, height);
+  noStroke();
+  fill(20, sliderRate.value()*100);
+  rect(0, 0, width, height - currentHeight);
+
+  
+  // Representamos las diferencias frecuencias de audio
+
+  /*
+  Analyze
+  https://p5js.org/reference/p5.FFT/analyze/
+  analyze([bins], [scale])
+
+  */
+
+  let spectrum = fft.analyze();
+  
+  stroke(255, 200);
+  noFill();
+  
+  beginShape();
+    for (let i = 0; i < spectrum.length; i++){
+      let x = map(i, 0, spectrum.length, 0, width);
+      let h = map(spectrum[i], 0, 255, -height/5, height/5);
+      curveVertex(x, height/2 - (h/2));
+    }
+  endShape();
+
+
+  // Capturamos el tiempo transcurrido del sonido y pintamos las barras de progreso
+  
+  let current = song.currentTime()
+  let currentWidth = map(current, 0, time, 0, width)
+  fill(0);
+  noStroke();
+  rect(0, height - currentHeight, width, currentHeight);
+  
+  fill(255,80);
+  rect(0, height - currentHeight, currentWidth, currentHeight)
+
+
+  // Dibujamos un círculo representando la amplitud del sonido
+
+  /*
+  GetLevel
+  https://p5js.org/reference/p5.Amplitude/getLevel/
+  */
+  let r = amp.getLevel()*1000;
+  
+  
+  fill(255,20);
+  ellipse(width/2, height/2, r*2, r*2)
+
+  
 }
