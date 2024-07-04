@@ -1,4 +1,4 @@
-# libraries
+# Librerías
 
 [Librerías p5](https://p5js.org/es/libraries/)
 
