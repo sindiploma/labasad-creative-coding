@@ -25,6 +25,11 @@ function draw() {
   noStroke();
   fill(c);
 
+  /*
+  Lerp
+  https://p5js.org/reference/p5.Vector/lerp/
+  lerp(x, y, z, amt,v, amt,v1, v2, amt, [target])
+  */
   ball.x = lerp(ball.x, target.x, 0.1);
   ball.y = lerp(ball.y, target.y, 0.1);
 
@@ -54,6 +59,11 @@ function setTarget() {
     target.y = 0;
   }
   
+  /*
+  Random
+  https://p5js.org/reference/p5/random/
+  random([min], [max], choices)
+  */
   target.x += round(random(-distance, distance));
   target.y += round(random(-distance, distance));
 }

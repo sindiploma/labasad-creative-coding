@@ -23,6 +23,11 @@ function draw() {
         let centerx = i*sizex + sizex/2;
         let centery = j*sizey + sizey/2;
 
+        /*
+        Noise
+        https://p5js.org/reference/p5/noise/
+        noise(x, [y], [z])
+        */
         let n = map(noise(xoff), 0, 1, 0, TWO_PI);
 
         noStroke();

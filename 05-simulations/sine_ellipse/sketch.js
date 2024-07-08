@@ -34,7 +34,20 @@ function draw() {
   for (let i = 0; i < config.steps; i++) {
     angle = TWO_PI/config.steps*i;
     f_radius = config.amplitude*sin(angle * config.period);
+
+    /*
+    Cos
+    https://p5js.org/reference/p5/cos/
+    cos(angle)
+    */
     let x = cos(angle)*(config.radius+f_radius);
+    
+    
+    /*
+    Sin
+    https://p5js.org/reference/p5/sin/
+    sin(angle)
+    */
     let y = sin(angle)*(config.radius+f_radius);
     
     noStroke();

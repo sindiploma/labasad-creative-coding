@@ -16,6 +16,11 @@ function draw() {
   for (let i = 0; i < steps; i++) {
     let x = i*width/steps;
     
+    /*
+    Random
+    https://p5js.org/reference/p5/random/
+    random([min], [max], choices)
+    */
     let y = random(height);
     
     stroke(0, 30);
@@ -29,6 +34,11 @@ function draw() {
   for (let i = 0; i < steps; i++) {
     let x = i*width/steps;
 
+    /*
+    Noise
+    https://p5js.org/reference/p5/noise/
+    noise(x, [y], [z])
+    */
     let y = noise(time)*100;
 
     noStroke();

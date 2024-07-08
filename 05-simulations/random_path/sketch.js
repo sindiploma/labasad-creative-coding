@@ -26,6 +26,11 @@ function draw() {
     posy = 0;
   }
 
+  /*
+    Random
+    https://p5js.org/reference/p5/random/
+    random([min], [max], choices)
+    */
   posx += random(-noise,noise);
   posy += random(-noise,noise);
 

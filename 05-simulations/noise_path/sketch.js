@@ -24,9 +24,20 @@ class Worm {
       this.pos.y = height
     }
 
+    /*
+    Noise
+    https://p5js.org/reference/p5/noise/
+    noise(x, [y], [z])
+    */
     let x = map(noise(this.offx), 0, 1, -5, 5);
     let y = map(noise(this.offx+1000), 0, 1, -5, 5);
 
+
+    /*
+    CreateVector
+    https://p5js.org/reference/p5/createVector/
+    createVector([x], [y], [z])
+    */
     this.speed = createVector(x, y);
     this.pos.add(this.speed);
 

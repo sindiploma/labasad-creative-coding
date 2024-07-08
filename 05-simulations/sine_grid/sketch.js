@@ -52,7 +52,21 @@ function draw() {
       fill(255);
       
       push();
-        translate(sin(angle+column)*config.radius,cos(angle+row)*config.radius);  
+        /*
+        Sin
+        https://p5js.org/reference/p5/sin/
+        sin(angle)
+        */
+        let posx = sin(angle+column)*config.radius;
+
+        /*
+        Cos
+        https://p5js.org/reference/p5/cos/
+        cos(angle)
+        */
+        let posy = cos(angle+row)*config.radius;
+        
+        translate(posx,posy);  
         ellipse(mesh[row][column].x, mesh[row][column].y, 10, 10);
       pop();
     }
