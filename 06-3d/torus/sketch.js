@@ -34,9 +34,19 @@ function draw() {
   background(0);
 
   stroke(255,0,0);
+
+  // PointLight
+  // pointLight(v1, v2, v3, x, y, z)
   pointLight(70, 70, 70, -(300 + 40*level), -(300 + 100*level), 350);
+  
+  // DirectionalLight
+  // directionalLight(v1, v2, v3, x, y, z)
   directionalLight(255, 0, 0, -100, -100, 100);
+  
+  // AmbientMaterial
+  // ambientMaterial(v1, v2, v3)
   ambientMaterial(255, 255, 255);
+  
   noStroke();
 
   push();
