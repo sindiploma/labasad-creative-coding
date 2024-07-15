@@ -30,6 +30,10 @@ function draw() {
   let level = mic.getLevel();
 
   orbitControl();
+
+  // Camera
+  // camera([x], [y], [z], [centerX], [centerY], [centerZ], [upX], [upY], [upZ])
+  camera(0, 0, (height/2) / tan(PI/6));
   
   background(0);
 
