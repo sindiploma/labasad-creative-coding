@@ -2,7 +2,7 @@
 
 La función [`setup()`](https://p5js.org/reference/p5/setup/) es ejecutada una vez, cuando el programa empieza. 
 
-La función [`draw()`](https://p5js.org/reference/p5/draw/) es ejecutada después de `setup()`, y ejecuta contínuamente las líneas de código dentro de su bloque hasta que el programa es detenido o se ejecuta la función [`noLoop()`](https://p5js.org/reference/p5.Score/noLoop/).
+La función [`draw()`](https://p5js.org/reference/p5/draw/) es ejecutada después de `setup()`, y ejecuta contínuamente las líneas de código dentro de su bloque hasta que el programa es detenido o se ejecuta la función [`noLoop()`](https://p5js.org/reference/p5.Score/noLoop/). La función `draw()` es el equivalente a [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame) en Vanilla JS.
 
 [Positioning your canvas](https://github.com/processing/p5.js/wiki/Positioning-your-canvas)
 
