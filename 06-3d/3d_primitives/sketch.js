@@ -3,13 +3,13 @@ let astronaut;
 function preload() {
   // loadModel
   // loadModel(path, normalize, [successCallback], [failureCallback], [fileType],path, [successCallback], [failureCallback], [fileType],path, [options])
-  astronaut = loadModel('../../assets/suzanne.obj');
-  // astronaut = loadModel('../../assets/astronaut.obj');
+  // astronaut = loadModel('../../assets/suzanne.obj');
+  astronaut = loadModel('../../assets/astronaut.obj');
 }
 
 function setup() {
   // createCanvas()
-  // createCanvas([width], [height], [renderer], [canvas],[width], [height], [canvas])
+  // createCanvas([width], [height], [renderer])
   createCanvas(710, 400, WEBGL);
 
   angleMode(DEGREES);
@@ -19,6 +19,8 @@ function setup() {
 
 function draw() {
   background(250);
+
+  // stroke(0);
 
   // Plane
   // plane([width], [height], [detailX], [detailY])
@@ -33,7 +35,7 @@ function draw() {
   push();
     translate(-75, -100, 0);
     rotateWithFrameCount();
-    box(70, 70, 70);
+    box(70, 70, 200);
   pop();
 
   // Cylinder
@@ -41,7 +43,7 @@ function draw() {
   push();
     translate(100, -100, 0);
     rotateWithFrameCount();
-    cylinder(70, 70);
+    cylinder(70, 120, 200, 200, true, false);
   pop();
 
   // Cone
@@ -57,7 +59,7 @@ function draw() {
   push();
     translate(-250, 100, 0);
     rotateWithFrameCount();
-    torus(50, 20);
+    torus(50, 45, 5, 5);
   pop();
 
   // Sphere
@@ -87,6 +89,9 @@ function draw() {
     rotateZ(180);
     model(astronaut);
   pop();
+
+
+  orbitControl();
 }
 
 
