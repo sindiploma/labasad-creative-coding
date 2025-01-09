@@ -1,115 +1,247 @@
-### Color
+## Color
 
-[`colorMode()`](https://p5js.org/reference/p5/colorMode/) cambia la manera en que se interpretan los datos de color usando el modelo de color RGB.
+`colorMode()` cambia la manera en que se interpretan los datos de color usando el modelo de color RGB.
+- **P5.js**: [`colorMode(mode, [max1], [max2], [max3], [maxA])`](https://p5js.org/reference/p5/colorMode)
+- **Vanilla JS**: No hay equivalente directo. Canvas siempre usa RGB/RGBA
 
-[`color()`](https://p5js.org/reference/p5/color/) Crea colores para ser almacenados en variables del tipo color. El modo por defecto son valores RGB. Soporta RGB, RGBA, HSB, HSL, HEX.
+`color()` Crea colores para ser almacenados en variables del tipo color. El modo por defecto son valores RGB. Soporta RGB, RGBA, HSB, HSL, HEX.
+- **P5.js**: [`color(v1, v2, v3, [alpha])`](https://p5js.org/reference/p5/color)
+- **Vanilla JS**: 
+```javascript
+// Almacenar valores RGB en un array
+const myColor = [255, 0, 0];  // rojo
+const myColorWithAlpha = [255, 0, 0, 0.5];  // rojo semi-transparente
+
+// Para usar el color:
+ctx.fillStyle = `rgb(${myColor.join(',')})`;
+// o con alpha
+ctx.fillStyle = `rgba(${myColorWithAlpha.join(',')})`;
+```
 
 **Lectura adicional:** [Color Arrangment in Generative Art | Tyler Hobbs](https://www.tylerxhobbs.com/words/color-arrangment-in-generative-art)
 
----
+## Primitivos 2D
 
-### Primitivos 2D
+`point()` dibuja un punto
+- **P5.js**: [`point(x, y)`](https://p5js.org/reference/p5/point)
+- **Vanilla JS**:
+```javascript
+ctx.beginPath();
+ctx.moveTo(x, y);
+ctx.lineTo(x, y);
+ctx.stroke();
+```
 
-[`point()`](https://p5js.org/reference/p5/point) dibuja un punto
+`ellipse()` dibuja una elipse (óvalo)
+- **P5.js**: [`ellipse(x, y, w, h)`](https://p5js.org/reference/p5/ellipse)
+- **Vanilla JS**: `ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle)`
 
-[`ellipse()`](https://p5js.org/reference/p5/ellipse) dibuja una elipse (óvalo)
+`circle()` dibuja una círculo (una elipse con lo ancho y lo alto igual)
+- **P5.js**: [`circle(x, y, d)`](https://p5js.org/reference/p5/circle)
+- **Vanilla JS**: `ctx.arc(x, y, radius, 0, Math.PI * 2)`
 
-[`circle()`](https://p5js.org/reference/p5/circle) dibuja una círculo (una elipse con lo ancho y lo alto igual)
+`rect()` dibuja una rectángulo
+- **P5.js**: [`rect(x, y, w, h, [tl], [tr], [br], [bl])`](https://p5js.org/reference/p5/rect)
+- **Vanilla JS**: `ctx.rect(x, y, width, height)`
 
-[`rect()`](https://p5js.org/reference/p5/rect) dibuja una rectángulo
+`line()` dibuja una línea
+- **P5.js**: [`line(x1, y1, x2, y2)`](https://p5js.org/reference/p5/line)
+- **Vanilla JS**:
+```javascript
+ctx.beginPath();
+ctx.moveTo(x1, y1);
+ctx.lineTo(x2, y2);
+ctx.stroke();
+```
 
-[`line()`](https://p5js.org/reference/p5/line) dibuja una línea
+`arc()` dibuja un arco
+- **P5.js**: [`arc(x, y, w, h, start, stop, [mode], [detail])`](https://p5js.org/reference/p5/arc)
+- **Vanilla JS**: `ctx.arc(x, y, radius, startAngle, endAngle)`
 
-[`arc()`](https://p5js.org/reference/p5/arc) dibuja un arco
+`quad()` dibuja un cuadrilátero, un polígono de cuatro lados
+- **P5.js**: [`quad(x1, y1, x2, y2, x3, y3, x4, y4)`](https://p5js.org/reference/p5/quad)
+- **Vanilla JS**:
+```javascript
+ctx.beginPath();
+ctx.moveTo(x1, y1);
+ctx.lineTo(x2, y2);
+ctx.lineTo(x3, y3);
+ctx.lineTo(x4, y4);
+ctx.closePath();
+ctx.fill(); // o ctx.stroke();
+```
 
-[`quad()`](https://p5js.org/reference/p5/quad) dibuja un cuadrilátero, un polígono de cuatro lados
+`triangle()` dibuja un triángulo
+- **P5.js**: [`triangle(x1, y1, x2, y2, x3, y3)`](https://p5js.org/reference/p5/triangle)
+- **Vanilla JS**:
+```javascript
+ctx.beginPath();
+ctx.moveTo(x1, y1);
+ctx.lineTo(x2, y2);
+ctx.lineTo(x3, y3);
+ctx.closePath();
+ctx.fill(); // o ctx.stroke();
+```
 
-[`triangle()`](https://p5js.org/reference/p5/triangle) dibuja un triángulo
+`beginShape()` / `endShape()` / `vertex()` - beginShape empieza la grabación de vértices para una figura, mientras que endShape termina la grabación. Después de llamar a la función beginShape, debe ser seguida por una serie de comandos vertex.
+- **P5.js**: [`beginShape([kind])`](https://p5js.org/reference/p5/beginShape), [`endShape([mode])`](https://p5js.org/reference/p5/endShape), [`vertex(x, y)`](https://p5js.org/reference/p5/vertex)
+- **Vanilla JS**:
+```javascript
+ctx.beginPath();
+ctx.moveTo(x1, y1);  // Primer vertex
+ctx.lineTo(x2, y2);  // Siguientes vertices
+// ... más vertices
+ctx.closePath();     // Equivalente a endShape(CLOSE)
+```
 
-[`beginShape()`](https://p5js.org/reference/p5/beginShape) / [`endShape()`](https://p5js.org/reference/p5/endShape) / [`vertex()`](https://p5js.org/reference/p5/vertex) *beginShape* empieza la grabación de vértices para una figura, mientras que *endShape* termina la grabación. Después de llamar a la función *beginShape*, debe ser seguida por una serie de comandos *vertex*.
+## Atributos
 
----
+`background()` define el color usado como fondo del lienzo
+- **P5.js**: [`background(color, [a])`](https://p5js.org/reference/p5/background)
+- **Vanilla JS**: 
+```javascript
+ctx.fillStyle = color;
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+```
 
-### Atributos
+`fill()` / `noFill()` definen el relleno de las figuras
+`stroke()` / `noStroke()` definen los bordes de las figuras
+- **P5.js**: [`fill(v1, v2, v3, [alpha])`](https://p5js.org/reference/p5/fill) / [`noFill()`](https://p5js.org/reference/p5/noFill) / [`stroke(v1, v2, v3, [alpha])`](https://p5js.org/reference/p5/stroke) / [`noStroke()`](https://p5js.org/reference/p5/noStroke)
+- **Vanilla JS**:
+```javascript
+// Fill
+ctx.fillStyle = color;  // para fill()
+ctx.fillStyle = 'transparent';  // para noFill()
 
-[`background()`](https://p5js.org/reference/p5/background) define el color usado como fondo del lienzo
+// Stroke
+ctx.strokeStyle = color;  // para stroke()
+ctx.strokeStyle = 'transparent';  // para noStroke()
+```
 
-[`fill()`](https://p5js.org/reference/p5/fill) / [`noFill()`](https://p5js.org/reference/p5/noFill) definen el relleno de las figuras.
+`strokeWeight()` define el ancho del trazo usado para dibujar líneas
+`strokeCap()` define el estilo de rendering de los extremos de las líneas
+- **P5.js**: [`strokeWeight(weight)`](https://p5js.org/reference/p5/strokeWeight) / [`strokeCap(cap)`](https://p5js.org/reference/p5/strokeCap)
+- **Vanilla JS**:
+```javascript
+ctx.lineWidth = n;
+ctx.lineCap = type;  // 'butt', 'round', 'square'
+```
 
-[`stroke()`](https://p5js.org/reference/p5/stroke) / [`noStroke()`](https://p5js.org/reference/p5/noStroke) definen los bordes de las figuras.
+`ellipseMode()` modifica la ubicación de donde las elipses son dibujadas
+`rectMode()` modifica la ubicación de donde los rectángulos son dibujados
+- **P5.js**: [`ellipseMode(mode)`](https://p5js.org/reference/p5/ellipseMode), [`rectMode(mode)`](https://p5js.org/reference/p5/rectMode)
+- **Vanilla JS**: No hay equivalente directo, requiere cálculos manuales de las coordenadas
 
-[`strokeWeight()`](https://p5js.org/reference/p5/strokeWeight) define el ancho del trazo usado para dibujar líneas
+`smooth()` / `noSmooth()`
+- **P5.js**: [`smooth()`](https://p5js.org/reference/p5/smooth) / [`noSmooth()`](https://p5js.org/reference/p5/noSmooth)
+- **Vanilla JS**:
+```javascript
+ctx.imageSmoothingEnabled = true;  // smooth()
+ctx.imageSmoothingEnabled = false; // noSmooth()
+```
 
-[`strokeCap()`](https://p5js.org/reference/p5/strokeCap) define el estilo de rendering de los extremos de las líneas
+## Tipografía
 
-[`ellipseMode()`](https://p5js.org/reference/p5/ellipseMode)  modifica la ubicación de donde las elipses son dibujadas
+`loadFont()` Carga un archivo de fuente de letra (*.otf, .ttf*) desde un archivo o URL, y retorna un objeto *PFont*. Este método es asíncrono, lo que significa que puede que no finalice antes de que la siguiente línea en tu sketch sea ejecutada.
+- **P5.js**: [`loadFont(path, [callback], [onError])`](https://p5js.org/reference/p5/loadFont)
+- **Vanilla JS**:
+```javascript
+const font = new FontFace('fontName', 'url(path/to/font.ttf)');
+font.load().then(function(loadedFont) {
+  document.fonts.add(loadedFont);
+});
+```
 
-[`rectMode()`](https://p5js.org/reference/p5/rectMode) modifica la ubicación de donde los rectángulos son dibujados
+`textFont()` Define la fuente con la que se dibujará el contenido de la función *text()*
+`text()` dibuja texto
+`textAlign()` define el alineamiento actual para dibujar texto
+`textSize()` define o retorna el tamaño actual de la tipografía
+- **P5.js**: [`textFont(font, [size])`](https://p5js.org/reference/p5/textFont), [`text(str, x, y, [x2], [y2])`](https://p5js.org/reference/p5/text), [`textAlign(horizAlign, [vertAlign])`](https://p5js.org/reference/p5/textAlign), [`textSize(size)`](https://p5js.org/reference/p5/textSize)
+- **Vanilla JS**:
+```javascript
+ctx.font = '20px fontName';  // textFont() y textSize()
+ctx.textAlign = 'left';      // textAlign()
+ctx.fillText(str, x, y);     // text() con fill
+ctx.strokeText(str, x, y);   // text() con stroke
+```
 
-[`smooth()`](https://p5js.org/reference/p5/smooth) / [`noSmooth()`](https://p5js.org/reference/p5/noSmooth)
+`textBounds()` y `textToPoints()`
+- **P5.js**: [`textBounds(str, x, y, [fontSize], [options])`](https://p5js.org/reference/p5.Font/textBounds), [`textToPoints(txt, x, y, fontSize, [options])`](https://p5js.org/reference/p5.Font/textToPoints)
 
----
-
-### Tipografia
-
-[`loadFont()`](https://p5js.org/reference/p5/loadFont) Carga un archivo de fuente de letra (*.otf, .ttf*) desde un archivo o URL, y retorna un objeto *PFont*. Este método es asíncrono, lo que significa que puede que no finalice antes de que la siguiente línea en tu sketch sea ejecutada.
-
-[`textFont()`](https://p5js.org/reference/p5/textFont) Define la fuente con la que se dibujará el contenido de la función *text()*
-
-[`text()`](https://p5js.org/reference/p5/text) dibuja texto
-
-[`textAlign()`](https://p5js.org/reference/p5/textAlign) define el alineamiento actual para dibujar texto.
-
-[`textSize()`](https://p5js.org/reference/p5/textSize) define o retorna el tamaño actual de la tipografía.
-
-[`textBounds()`](https://p5js.org/reference/p5.Font/textBounds)
-
-[`textToPoints()`](https://p5js.org/reference/p5.Font/textToPoints)
-
----
-
-### Expresiones y operadores
+## Expresiones y operadores
 
 Comparison and logical operators `++`, `+=`, `||`, `&&`, `!`, …
-
 [JavaScript Comparison and Logical Operators](https://www.w3schools.com/js/js_comparisons.asp)
 
----
+## Cálculo
 
-### Cálculo
+`ceil()` / `floor()` calculan el entero más cercano que: es mayor o igual que el valor del parámetro (*ceil*), o menor o igual (*floor*).
+- **P5.js**: [`ceil(n)`](https://p5js.org/reference/p5/ceil), [`floor(n)`](https://p5js.org/reference/p5/floor)
+- **Vanilla JS**: `Math.ceil(n)`, `Math.floor(n)`
 
-[`ceil()`](https://p5js.org/es/reference/p5/ceil/) / [`floor()`](https://p5js.org/es/reference/p5/floor) calculan el entero más cercano que: es mayor o igual que el valor del parámetro (*ceil*), o menor o igual (*floor*).
+`random()` retorna un número aleatorio de tipo float (punto flotante).
+- **P5.js**: [`random([min], [max])`](https://p5js.org/reference/p5/random)
+- **Vanilla JS**: `Math.random()`
 
-[`random()`](https://p5js.org/reference/p5/random) retorna un número aleaotorio de tipo float (punto flotante).
-
----
-
-### Condicionales y loops
+## Condicionales y loops
 
 `if` / `else`
-
 `for` / `while`
 
 [I.1: Random Walker - The Nature of Code](https://www.youtube.com/watch?v=rqecAdEGW6I)
 
----
+## Eventos
 
-### Eventos
+`mouseX` / `mouseY` almacenan la posición actual del cursor dentro del canvas
+`pmouseX` / `pmouseY` almacenan la posición anterior
+- **P5.js**: [`mouseX`](https://p5js.org/reference/p5/mouseX), [`mouseY`](https://p5js.org/reference/p5/mouseY), [`pmouseX`](https://p5js.org/reference/p5/pmouseX), [`pmouseY`](https://p5js.org/reference/p5/pmouseY)
+- **Vanilla JS**: No existen como variables globales. Necesitas implementarlas manualmente:
+```javascript
+let mouseX = 0, mouseY = 0;
+let pmouseX = 0, pmouseY = 0;
 
-[`mouseX`](https://p5js.org/reference/p5/mouseX) / [`mouseY`](https://p5js.org/reference/p5/mouseY) almacenan la posición actual del cursor dentro del canvas
+canvas.addEventListener('mousemove', (event) => {
+  const rect = canvas.getBoundingClientRect();
+  pmouseX = mouseX;
+  pmouseY = mouseY;
+  mouseX = event.clientX - rect.left;
+  mouseY = event.clientY - rect.top;
+});
+```
 
-[`pmouseX`](https://p5js.org/reference/p5/pmouseX) / [`pmouseY`](https://p5js.org/reference/p5/pmouseY/) almacenan la posición
+`winMouseX` / `winMouseY` / `pwinMouseX` / `pwinMouseY` almacenan la posición del cursor respecto a la ventana del navegador
+- **P5.js**: [`winMouseX`](https://p5js.org/reference/p5/winMouseX), [`winMouseY`](https://p5js.org/reference/p5/winMouseY), [`pwinMouseX`](https://p5js.org/reference/p5/pwinMouseX), [`pwinMouseY`](https://p5js.org/reference/p5/pwinMouseY)
+- **Vanilla JS**:
+```javascript
+window.addEventListener('mousemove', (event) => {
+  const winMouseX = event.clientX;
+  const winMouseY = event.clientY;
+});
+```
 
-[`winMouseX`](https://p5js.org/es/reference/p5/winMouseX) / [`winMouseY`](https://p5js.org/es/reference/p5/winMouseY) / [`pwinMouseX`](https://p5js.org/es/reference/p5/pwinMouseX) / [`pwinMouseY`](https://p5js.org/es/reference/p5/pwinMouseY) almacenan la posición del cursor respecto a la ventana del navegador
+`mouseIsPressed` / `mousePressed()` La función mousePressed es llamada cada vez que un botón del ratón está siendo presionado, mientras que la variable booleana mouseIsPressed es verdadera (true) si el ratón está siendo presionado, y falsa (false) en caso contrario.
+- **P5.js**: [`mouseIsPressed`](https://p5js.org/reference/p5/mouseIsPressed), [`mousePressed([function])`](https://p5js.org/reference/p5/mousePressed)
+- **Vanilla JS**:
+```javascript
+let isMousePressed = false;
+canvas.addEventListener('mousedown', () => isMousePressed = true);
+canvas.addEventListener('mouseup', () => isMousePressed = false);
+```
 
-[`mouseIsPressed`](https://p5js.org/reference/p5/mouseIsPressed) / [`mousePressed()`](https://p5js.org/reference/p5/mousePressed) La función mousePressed es llamada cada vez que un botón del ratón está siendo presionado, mientras que la variable booleana mouseIsPressed es verdadera (true) si el ratón está siendo presionado, y falsa (false) en caso contrario.
+`keyPressed()` es llamada una vez cada vez que una tecla es presionada
+`key` / `keyCode` la variable de sistema *key* siempre contiene el valor más reciente de la tecla del teclado presionada, mientras que la variable *keyCode* es usada para detectar teclas especiales
+- **P5.js**: [`keyPressed([function])`](https://p5js.org/reference/p5/keyPressed), [`key`](https://p5js.org/reference/p5/key), [`keyCode`](https://p5js.org/reference/p5/keyCode)
+- **Vanilla JS**:
+```javascript
+window.addEventListener('keydown', (event) => {
+  const key = event.key;
+  const keyCode = event.keyCode;
+});
+```
 
-[`mouseMoved()`](https://p5js.org/reference/p5/mouseMoved) es llamada cada vez que el ratón se mueve y un botón del ratón no está siendo presionado
-
-[`keyPressed()`](https://p5js.org/reference/p5/keyPressed) es llamada una vez cada vez que una tecla es presionada
-
-[`key`](https://p5js.org/reference/p5/key) / [`keyCode`](https://p5js.org/reference/p5/keyCode) la variable de sistema *key* siempre contiene el valor más reciente de la tecla del teclado presionada, mientras que la variable *keyCode* es usada para detectar teclas especiales
-
-[`touchStarted()`](https://p5js.org/reference/p5/touchStarted) / [`touchMoved()`](https://p5js.org/reference/p5/touchMoved)
-
-[`deviceOrientation`](https://p5js.org/reference/p5/deviceOrientation)
+`touchStarted()` / `touchMoved()`
+- **P5.js**: [`touchStarted([function])`](https://p5js.org/reference/p5/touchStarted), [`touchMoved([function])`](https://p5js.org/reference/p5/touchMoved)
+- **Vanilla JS**:
+```javascript
+canvas.addEventListener('touchstart', callback);
+canvas.addEventListener('touch
