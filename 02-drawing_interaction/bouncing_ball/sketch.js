@@ -5,7 +5,7 @@ let posx;
 let posy;
 let speedx = 2;
 let speedy = 3;
-let limit = 100;
+let limit = 20;
 
 
 function setup() {
@@ -76,7 +76,6 @@ function draw() {
   fill(255);
   textAlign(RIGHT);
   text(count, width - 10, height - 10);
-
 
   // Actualizar cronometro
   if (frameCount % 60 === 0) {

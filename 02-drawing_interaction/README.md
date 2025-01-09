@@ -181,7 +181,7 @@ Comparison and logical operators `++`, `+=`, `||`, `&&`, `!`, …
 
 `random()` retorna un número aleatorio de tipo float (punto flotante).
 - **P5.js**: [`random([min], [max])`](https://p5js.org/reference/p5/random)
-- **Vanilla JS**: `Math.random()`
+- **Vanilla JS**: `Math.random()` No acepta parámetros y solo devuelve números entre 0 (incluido) y 1 (no incluido)
 
 ## Condicionales y loops
 
