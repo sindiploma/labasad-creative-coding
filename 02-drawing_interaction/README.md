@@ -1,6 +1,6 @@
 ## Color
 
-`colorMode()` cambia la manera en que se interpretan los datos de color usando el modelo de color RGB.
+`colorMode()` cambia la manera en que se interpretan los datos de color usando el modelo de color RGB. Permite personalizar el rango de valores para cada componente del color.
 - **P5.js**: [`colorMode(mode, [max1], [max2], [max3], [maxA])`](https://p5js.org/reference/p5/colorMode)
 - **Vanilla JS**: No hay equivalente directo. Canvas siempre usa RGB/RGBA
 
@@ -40,7 +40,7 @@ ctx.stroke();
 - **P5.js**: [`circle(x, y, d)`](https://p5js.org/reference/p5/circle)
 - **Vanilla JS**: `ctx.arc(x, y, radius, 0, Math.PI * 2)`
 
-`rect()` dibuja una rectángulo
+`rect()` dibuja una rectángulo, al que adicionalmente podemos especificar el border radius de cada uno de sus vértices.
 - **P5.js**: [`rect(x, y, w, h, [tl], [tr], [br], [bl])`](https://p5js.org/reference/p5/rect)
 - **Vanilla JS**: `ctx.rect(x, y, width, height)`
 
@@ -243,5 +243,30 @@ window.addEventListener('keydown', (event) => {
 - **P5.js**: [`touchStarted([function])`](https://p5js.org/reference/p5/touchStarted), [`touchMoved([function])`](https://p5js.org/reference/p5/touchMoved)
 - **Vanilla JS**:
 ```javascript
-canvas.addEventListener('touchstart', callback);
-canvas.addEventListener('touch
+canvas.addEventListener('touchstart', (event) => {
+  event.preventDefault();  // Prevenir el comportamiento por defecto
+  const touch = event.touches[0];
+  const rect = canvas.getBoundingClientRect();
+  const x = touch.clientX - rect.left;
+  const y = touch.clientY - rect.top;
+});
+
+canvas.addEventListener('touchmove', (event) => {
+  event.preventDefault();
+  const touch = event.touches[0];
+  const rect = canvas.getBoundingClientRect();
+  const x = touch.clientX - rect.left;
+  const y = touch.clientY - rect.top;
+});
+```
+
+`deviceOrientation`
+- **P5.js**: [`deviceOrientation`](https://p5js.org/reference/p5/deviceOrientation)
+- **Vanilla JS**:
+```javascript
+window.addEventListener('deviceorientation', (event) => {
+  const alpha = event.alpha;  // Rotación alrededor del eje z (0-360)
+  const beta = event.beta;    // Rotación alrededor del eje x (-180-180)
+  const gamma = event.gamma;  // Rotación alrededor del eje y (-90-90)
+});
+```
