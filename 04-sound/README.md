@@ -10,6 +10,12 @@
 
 [`p5.Amplitude`](https://p5js.org/reference/p5.sound/p5.Amplitude/) mide el volumen entre 0 y 1 de todos los sonidos p5 de forma predeterminada, o utiliza `setInput()` para escuchar una fuente de sonido específica. Acepta un valor de suavizado opcional, que tiene como valor predeterminado 0.
 
+[`p5.FFT`](https://p5js.org/reference/p5.sound/p5.FFT/) analiza el espectro de frecuencia de audio. El espectro de frecuencia de audio es una representación de un sonido que nos muestra qué frecuencias (graves 20-250Hz, medios 250-2000Hz, agudos 2000-20000Hz) están presentes y con qué intensidad.
+
+[`analyze()`](https://p5js.org/reference/p5.FFT/analyze/) devuelve un array de valores de amplitud (entre 0 y 255) a lo largo del espectro de frecuencias. El array tiene un tamaño de 1024 valores por defecto, pero puede especificarse en el constructor de FFT.
+
+[`getEnergy()`](https://p5js.org/reference/p5.FFT/getEnergy/) devuelve la energía (volumen) de una frecuencia específica o un rango de frecuencias. Acepta una frecuencia en Hz o un rango predefinido ('bass', 'lowMid', 'mid', 'highMid', 'treble').
+
 [`setInput()`](https://p5js.org/reference/p5.Amplitude/setInput/) se conecta a la instancia p5sound (salida principal) de forma predeterminada. Opcionalmente, puede pasar una fuente específica (es decir, un archivo de sonido).
 
 [`play()`](https://p5js.org/reference/p5.SoundFile/play/) reproduce el `p5.SoundFile`
