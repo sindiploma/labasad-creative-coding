@@ -3,9 +3,9 @@ let animationDuration;
 let radius = 15;
 
 function setup() {
-  createCanvas(400, 600); // Canvas más alto para acomodar más elipses
+  createCanvas(400, 600);
   t = 0; // Contador de tiempo que se incrementa cada frame
-  distance = width - radius*2;
+  distance = width - radius*2; // Distancia a recorrer por los objetos
   animationDuration = 60*2;  // Controla la duración total de la animación [60fps * 2]
 }
 
